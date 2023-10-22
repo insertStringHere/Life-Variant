@@ -1,0 +1,31 @@
+<html>
+	<!--Manual:
+		Conway's game of life functions according to four rules:
+			1.) If a cell has less than 2 neighboring cells, it will die by underpopulation
+			2.) If a cell has more than 3 neighboring cells, it will die by overpopulation.
+			3.) If a cell has 2 or 3 neighboring cells, it will survive into the next generation
+			4.) If an empty cell is surrounded by exactly 3 cells, a new cell will be born.
+		In this simulation, every box counts as a cell. By clicking these cells, it will toggle whether or not that cell is alive.
+		Pressing "Start" will begin the simulation using the listed rules at the speed selected in the dropdown.
+		Pressing "Step" will proceed the simulation by exactly one generation.
+		When the simulation is running, the "Start" button will be come "Stop". Press this button to pause the simulation.	
+	-->
+	<head>
+		<script src="index.js"/>
+		<style src="index.css"/>
+	</head>
+	<body>
+		<div>
+			<button id=startButton type="button" onclick="begin();">Start</button>
+			<button id=stepButton type="button" onclick="stepButt();">Step</button>
+			<select id=speedMeter>
+				<option value=10>Very Fast</option>
+				<option value=100>Fast</option>
+				<option value=300>Normal</option>
+				<option value=500>Slow</option>
+				<option value=1000>very slow</option>
+			</select>
+		</div>
+		<script>init(); createGrid();</script>
+	</body>
+</html>
